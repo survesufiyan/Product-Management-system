@@ -1,0 +1,26 @@
+<div class="main">
+    <h1>
+        Add Product
+    </h1>
+    <div class="form">
+        <input type="text" class="box" placeholder="Product Name" [(ngModel)]="pname">
+       <input type="text" class="box" placeholder="Product Description" [(ngModel)]="pDescription ">
+       <input type="text" class="box" placeholder="Product Price" [(ngModel)]="pPrice">
+
+       <select [(ngModel)]="categoryId" (change)="getSubList()" class="box">
+        <option *ngFor="let category of catgoryList" [value]="category.pc_id">{{category.categoryName}}</option>
+       </select>
+       <br />
+       <select [(ngModel)]="subCategoryId" class="box">
+        <option *ngFor="let category of subCategoryList" [value]="category.psc_id">{{category.subCategoryName}}</option>
+       </select>
+       <input type="text" class="box" placeholder="Product Quantity" [(ngModel)]="pQuantity">
+       <input type="text" class="box" placeholder="Product Image" [(ngModel)]="pImage ">
+        <div class="text-center">
+        <!-- <button *ngIf="!isEdit" (click)="addProduct()" class="btn btn-primary" >Add</button>
+        <button *ngIf="isEdit" (click)="updateProduct()" class="btnn">Update</button> -->
+        <button  (click)="addUpdateProudcut()" class="btn btn-primary" >{{isEdit ? 'Update': 'Add'}}</button>
+
+        </div>
+    </div>
+</div>

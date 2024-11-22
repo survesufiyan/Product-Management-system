@@ -1,0 +1,15 @@
+<div class="main">
+    <div class="profile" >
+        <div class="icon-item">
+            <mat-icon >account_circle</mat-icon>
+        </div>
+        <div class="uname">{{userName}}</div>
+    </div>
+    <div (click)="gotourl('adminDashboard')" [class.selected]="url === '/adminDashboard'">Home</div>
+    <div (click)="gotourl('listproduct')" [class.selected]="url === '/listproduct'">List Product</div>
+
+    <div (click)="gotourl('addproduct')" [class.selected]="url === '/addproduct'">Add Product</div>
+    <div (click)="gotourl('add-category')" [class.selected]="url === '/add-category'">Add Category</div>
+    <div (click)="gotourl('add-sub-category')" [class.selected]="url === '/add-sub-category'">Add Sub Category</div>
+    <div (click)="gotourl('logout')" [class.selected]="url === '/logout'">Logout</div>
+</div>

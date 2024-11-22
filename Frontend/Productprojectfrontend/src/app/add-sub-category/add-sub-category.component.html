@@ -1,0 +1,13 @@
+<div class="main">
+    <h1>
+        Add Sub Category
+    </h1>
+    <div class="form" *ngIf="allCategory && allCategory.length === 0"> Please add Category</div>
+    <div class="form" *ngIf="allCategory && allCategory.length > 0">
+        <input type="text" [(ngModel)]="categoryName" placeholder="Add Sub Catgory"/>
+        <select [(ngModel)]="parentCategory">
+            <option *ngFor="let cat of allCategory" [value]="cat.pc_id">{{cat.categoryName}}</option>
+        </select>
+        <button (click)="addSubCategory()">Add</button>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="main">
+    <h1>LIST OF PRODUCTS</h1><br>
+    <div class="left-panel">
+      <table border="1" class="table">
+        <thead class="header">
+          <tr >
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>category</th>
+            <th>subCategory</th>
+            <th>Stock</th>
+            <th>Image</th>
+            <th colspan="2" *ngIf="isAdmin">ACTIONS</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of allproduct">
+                <td>{{ product?.pid }}</td>
+                <td>{{ product?.pname }}</td>
+                <td>{{product?.pDescription}}</td>
+                <td>{{product?.pPrice}}</td>
+                <td>{{product?.productCategory?.categoryName}}</td>
+                <td>{{product?.subCategory?.subCategoryName}}</td>
+                <td>{{product?.pQuantity}}</td>
+                <!-- <td>{{product?.pImage}}</td> -->
+                <td><img [src]="product?.pImage"></td>
+                <td *ngIf="isAdmin">
+                    <button class="btn btn-warning" (click)="onEdit(product)" ><i class="fa fa-pencil"
+                        aria-hidden="true"></i>&nbsp;Edit</button>
+                </td>
+                <td *ngIf="isAdmin">
+                    <button class="btn btn-danger" (click)="onDelete(product)" ><i class="fa fa-trash"
+                        aria-hidden="true"></i>&nbsp;Delete</button>
+                </td> 
+                </tr>
+                
+        </tbody>
+        </table>
+    </div>
+ </div>
