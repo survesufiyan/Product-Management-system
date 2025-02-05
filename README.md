@@ -43,4 +43,4 @@ Contributions are welcome! Please fork the repository and create a pull request 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
-For any questions or inquiries, please contact [yourname@example.com](mailto:sufiyansurve9@gmail.com).
+For any questions or inquiries, please contact(mailto:sufiyansurve9@gmail.com).
